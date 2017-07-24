@@ -1,3 +1,16 @@
+Forked from visity/docker-carbon.
+
+Only carbon runs in this container.
+
+Note: It runs as root.
+
+Build instructions:
+
+    sudo docker build -t visity-carbon:dbg . 
+
+    sudo docker tag visity-carbon:dbg carbon
+
+
 # Usage
 
 This docker provides access to the Carbon/whisper layer of the graphite stack, inline with the one process per docker philosophy.
