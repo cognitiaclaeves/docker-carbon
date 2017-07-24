@@ -27,4 +27,8 @@ EXPOSE    2003 2004 7002
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
+ENV ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update; apt-get install -y inetutils-ping telnet curl
+
 CMD       ["/opt/graphite/bin/carbon-cache.py", "--debug", "start"]
+
